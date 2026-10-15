@@ -1,0 +1,25 @@
+name: Bug report
+description: Something broke or looks wrong
+body:
+  - type: input
+    id: version
+    attributes: { label: opentrainer version, description: "Shown by `ot --version`, or the name of the file you downloaded" }
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes: { label: System, options: [Windows 10/11, Linux (native), Linux (Wine/Proton), Other] }
+    validations: { required: true }
+  - type: input
+    id: game
+    attributes: { label: Game and where you got it, description: "e.g. Steam, build/version if you know it" }
+  - type: textarea
+    id: what
+    attributes: { label: What happened, description: "What you clicked, what you expected, what you saw. Screenshots welcome." }
+    validations: { required: true }
+  - type: checkboxes
+    id: single
+    attributes:
+      label: Single-player only
+      options:
+        - label: The game is single-player and does not use an anti-cheat
+          required: true
